@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9eaa16f25f.js" crossorigin="anonymous"></script>
+    <title>Cart</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: black;
+        }
+
+        .rowBorder{
+            border: 1px solid black;
+        }
+        .centerClass{
+            text-align: center;
+
+        }
+        h3,p,i{
+            color: black;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <!-- Header linked by jQuery-->
+    <div id="header"></div>
+    
+    <div class="container-fluid">
+    
+    
+            <div class="row row-cols-md-1 row-cols-sm-1 row-cols-lg-2">
+                <div class="col ">
+                    <h1 class="text-centre ">Items in Cart</h1>
+                    <div class="container">
+                        <div class="row rowBorder">
+                            <div class="col" >
+                                <img src="https://imagescdn.planetfashion.in/img/app/product/7/743345-8356407.jpg?auto=format&w=494.40000000000003" class="img-fluid"  alt="White Trouser" style="margin-top: 5%;margin-bottom: 5%;">
+    
+                            </div>
+                            <div class="col " style="margin: 1%;">
+                                <h3 >White Trouser</h3>
+                                <p >Price:$15</p>
+                                <i  class="fa-solid fa-trash fa-xl " style="margin: 5%;"></i>
+    
+                                
+                            </div>
+                            <div class="col">
+                                <div class="input-group quantity" style="margin: 5%;">
+                                    <div class="input-group-prepend decrement-btn" style="cursor: pointer">
+                                        <span class="input-group-text">-</span>
+                                    </div>
+                                    <input type="text" class="qty-input form-control" maxlength="2" max="10" >
+                                    <div class="input-group-append increment-btn" style="cursor: pointer">
+                                        <span class="input-group-text">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="col  ">
+                    
+                        <h1 class="text-centre ">Summary</h1>
+                        <div class="col rowBorder" style="margin: 5%;">
+                            <p class="centerClass">Cost:$15</p>
+                            <p class="centerClass">Shipping:$5</p>
+                            <p class="centerClass" style="border-top: 1px solid;">Total:$20</p>
+                            <button style="width: 100%; border-radius: 3px; background-color: goldenrod;">Checkout</button>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+                    
+                
+            </div>
+        
+        
+        
+    </div>
+    <div id="footer"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        $(function(){
+            $("#header").load('./CommonFile/header.html');
+            $("#footer").load('./CommonFile/footer.html');
+            
+            
+        })
+    </script>
+    <!--
+        The cart page should contain 2 parts, in a grid. The first part should list the items, 
+        and the second part should be a summary of the price, shipping, and total price, with a checkout button at the bottom.
+        Inside the first grid, create another 3-column grid:
+        1. The first column should have the image.
+        2. The second column should list the product’s name, and price, and should include a delete button (use font awesome's trash icon).
+        3. The third column should contain the form where the user can increase or decrease the quantity of the product,
+         with relevant icons on either side of the form (+ and – icons).
+        The summary section should be very simple. It should contain a single card, with a
+        1. Card header (Summary)
+        2. Product price (total)
+        3. Shipping with its cost
+        4. A horizontal line that separates both parts
+        5. The total cost and finally,
+        6. The checkout buttons.
+    -->
+    
+    
+</body>
+</html>
